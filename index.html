@@ -156,7 +156,7 @@
 
       <!-- CTA -->
       <div class="flex flex-col items-center gap-4">
-        <button onclick="openSurvey()" class="cta-shadow inline-flex items-center gap-3 font-body font-bold text-white px-10 py-4 rounded-lg transition-transform transition-shadow duration-200 ease-out hover:scale-[1.03] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaire cursor-pointer" style="background: linear-gradient(135deg, #0540AD 0%, #083daa 50%, #0a47c4 100%); font-size: 18px; border: none;">
+        <button onclick="document.getElementById('candidater').scrollIntoView({behavior:'smooth'})" class="cta-shadow inline-flex items-center gap-3 font-body font-bold text-white px-10 py-4 rounded-lg transition-transform transition-shadow duration-200 ease-out hover:scale-[1.03] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaire cursor-pointer" style="background: linear-gradient(135deg, #0540AD 0%, #083daa 50%, #0a47c4 100%); font-size: 18px; border: none;">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
           Réservez votre appel stratégique
         </button>
@@ -396,12 +396,12 @@
         Cet appel de 45 minutes est sans engagement. Nous analysons ensemble votre situation et nous vérifions que nous pouvons vous accompagner.
       </p>
 
-      <button onclick="openSurvey()" class="cta-shadow inline-flex items-center gap-3 font-body font-bold px-12 py-5 rounded-lg transition-transform transition-shadow duration-200 ease-out hover:scale-[1.03] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaire cursor-pointer" style="background: linear-gradient(135deg, #C4A35A 0%, #d4b46a 50%, #C4A35A 100%); font-size: 18px; color: #000E21; border: none;">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        Réservez votre appel stratégique
-      </button>
+      <!-- Widget iClosed -->
+      <div class="rounded-2xl overflow-hidden max-w-3xl mx-auto mb-10">
+        <div class="iclosed-widget" data-url="https://app.iclosed.io/e/citadelle/appel-strategique" title="Appel Strategique" style="width: 100%; height: 620px"></div>
+      </div>
 
-      <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-6">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
         <div class="flex items-center gap-2">
           <svg class="w-4 h-4 text-accent-chaud" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
           <span class="font-body font-light text-[13px]" style="color: #CDDAFA;">Gratuit & sans engagement</span>
@@ -427,37 +427,7 @@
     </p>
   </footer>
 
-  <!-- ════════════════════════════════════════════ -->
-  <!-- POPUP SURVEY HIGHLEVEL -->
-  <!-- ════════════════════════════════════════════ -->
-  <div id="survey-overlay" onclick="closeSurvey(event)" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,14,33,0.75); backdrop-filter:blur(4px); align-items:center; justify-content:center;">
-    <div style="position:relative; width:90%; max-width:620px; max-height:90vh; border-radius:16px; overflow:hidden;">
-      <button onclick="closeSurvey()" aria-label="Fermer" style="position:absolute; top:12px; right:12px; z-index:10; width:36px; height:36px; border-radius:50%; border:none; background:rgba(255,255,255,0.15); cursor:pointer; display:flex; align-items:center; justify-content:center; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <div id="survey-container" style="overflow-y:auto; max-height:90vh;">
-        <iframe src="https://api.leadconnectorhq.com/widget/survey/4cg77CqOqFAuRZyEmax1?v=3" style="border:none; width:100%; height:80vh;" scrolling="yes" id="4cg77CqOqFAuRZyEmax1" title="Questionnaire de candidature"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-  <script>
-    function openSurvey() {
-      const overlay = document.getElementById('survey-overlay');
-      overlay.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-    function closeSurvey(e) {
-      if (e && e.target !== e.currentTarget) return;
-      const overlay = document.getElementById('survey-overlay');
-      overlay.style.display = 'none';
-      document.body.style.overflow = '';
-    }
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeSurvey();
-    });
-  </script>
+  <script type="text/javascript" src="https://app.iclosed.io/assets/widget.js" async></script>
 
 </body>
 </html>

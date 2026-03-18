@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservez votre appel stratégique — Immopreneur Académie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,300&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#000E21',
+            'bleu-pale': '#CDDAFA',
+            glace: '#E8EEFC',
+            primaire: '#84C1FA',
+            'accent-chaud': '#C4A35A',
+            cta: '#0540AD',
+            'sous-titre': '#091C53',
+            corps: '#1E3063',
+          },
+          fontFamily: {
+            heading: ['Merriweather', 'serif'],
+            body: ['Lato', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; color: #1E3063; }
+    h1, h2, h3 { font-family: 'Merriweather', serif; }
+
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-size: 128px 128px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .sep {
+      width: 64px;
+      height: 3px;
+      background: linear-gradient(90deg, #C4A35A, #84C1FA);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body class="bg-glace antialiased">
+
+  <!-- HEADER BAR -->
+  <div class="w-full py-3 px-6 text-center" style="background: linear-gradient(90deg, #000E21 0%, #091C53 50%, #000E21 100%); border-bottom: 1px solid rgba(196,163,90,0.2);">
+    <p class="font-heading font-bold text-[13px] tracking-wide" style="color: #E8EEFC;">
+      <span class="mr-1.5">🏰</span> Immopreneur Académie
+    </p>
+  </div>
+
+  <!-- HERO / CONFIRMATION -->
+  <section class="relative overflow-hidden grain" style="background: radial-gradient(ellipse at 20% 0%, #0a1e3d 0%, #000E21 50%), radial-gradient(ellipse at 80% 100%, #091C53 0%, #000E21 70%);">
+    <div class="relative z-10 max-w-3xl mx-auto px-6 pt-16 pb-12 md:pt-24 md:pb-16 text-center">
+
+      <!-- Checkmark -->
+      <div class="flex justify-center mb-6">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, rgba(196,163,90,0.2), rgba(132,193,250,0.15)); border: 2px solid rgba(196,163,90,0.4);">
+          <svg class="w-8 h-8 text-accent-chaud" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+      </div>
+
+      <span class="inline-block font-body font-black text-[10px] tracking-[0.2em] uppercase text-accent-chaud mb-4">Qualification confirmée</span>
+      <div class="sep mx-auto mb-8"></div>
+
+      <h1 class="font-heading font-bold leading-tight mb-6" style="font-size: clamp(24px, 4vw, 38px); color: #E8EEFC; letter-spacing: -0.03em;">
+        Choisissez votre créneau pour votre appel stratégique
+      </h1>
+
+      <p class="font-body font-light max-w-2xl mx-auto mb-4" style="font-size: clamp(15px, 2.2vw, 17px); line-height: 1.7; color: #CDDAFA;">
+        Sélectionnez un créneau qui vous convient pour un appel de <strong class="font-bold text-white">45 minutes</strong> avec notre équipe. Nous analyserons ensemble votre situation et déterminerons comment mettre en place votre stratégie d'investissement.
+      </p>
+
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-16" style="background: linear-gradient(to bottom, transparent, #E8EEFC);"></div>
+  </section>
+
+  <!-- CALENDAR SECTION -->
+  <section class="py-12 md:py-16 px-6 bg-glace">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Calendar embed -->
+      <div class="bg-white rounded-2xl overflow-hidden" style="box-shadow: 0 1px 3px rgba(0,14,33,0.06), 0 8px 24px rgba(0,14,33,0.08), 0 24px 48px rgba(0,14,33,0.04);">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/booking/GnArdTnSv3M07cSlk3LV"
+          style="width: 100%; min-height: 700px; border: none; overflow: hidden;"
+          scrolling="no"
+          id="GnArdTnSv3M07cSlk3LV_1773804302394"
+          title="Calendrier de réservation">
+        </iframe>
+      </div>
+
+      <!-- Reassurance -->
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-accent-chaud" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span class="font-body font-light text-[13px] text-corps">Gratuit & sans engagement</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-accent-chaud" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span class="font-body font-light text-[13px] text-corps">45 minutes</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-accent-chaud" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span class="font-body font-light text-[13px] text-corps">Places limitées</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 px-6 text-center" style="background: #000E21; border-top: 1px solid rgba(132,193,250,0.08);">
+    <p class="font-body font-light text-[13px]" style="color: #CDDAFA; opacity: 0.5;">
+      &copy; 2026 Immopreneur Académie — Citadelle. Tous droits réservés.
+    </p>
+  </footer>
+
+  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+</body>
+</html>
