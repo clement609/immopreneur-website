@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/immopreneur", "destination": "/index.html" },
-    { "source": "/immopreneur/reservation", "destination": "/reservation.html" }
+    { "source": "/immopreneur", "destination": "/index.html" }
   ]
 }
